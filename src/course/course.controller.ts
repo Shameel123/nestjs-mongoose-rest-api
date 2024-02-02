@@ -39,4 +39,9 @@ export class CourseController {
   remove(@Param('id') id: string) {
     return this.courseService.remove(id);
   }
+
+  @Post('enroll/:courseId')
+  enroll(@Param('courseId') courseId: string, @Body('userId') userId: string) {
+    return this.courseService.enroll(courseId, userId);
+  }
 }
