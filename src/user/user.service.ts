@@ -12,6 +12,7 @@ export class UserService {
   create(createUserDto: CreateUserDto) {
     const createdUser = new this.userModel(createUserDto);
     return createdUser.save();
+    // return this.userModel.create(createUserDto);
   }
 
   findAll() {
